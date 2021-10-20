@@ -1,35 +1,22 @@
 ﻿using System;
-using System.IO; 
-using System.Collections; 
-using System.Text; 
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace myapp
+namespace Assignment
 {
-    public class Program
+    static class Program
     {
-        public static void Main(string [] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-           
-            Console.WriteLine("Enter the string you would like to reverse >"); 
-            string str = Console.ReadLine(); 
-
-            Console.WriteLine("The reversed string is: "+reverseString(str)); 
-            
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
-
-        private static string reverseString (string str)
-        {
-            char[]charArray = str.ToCharArray(); 
-            Array.Reverse(charArray); 
-            return new string(charArray); 
-        }
-
-        
-            
-            
-            
-                
-
-        
     }
 }
